@@ -13,35 +13,35 @@ const HomeHeader = () => (
             <NavBar theme="light" />
         </header>
         <div className={`${Spirit.page.xl} pb5 pt10 pt15-ns pt20-l pb10-ns pb15-l flex flex-column items-center bt bn-ns b--white-10`}>
-            <h1 className="ma0 pa0 f2 f1-ns f-headline-l white header-heading-shadow">Ghost Documentation</h1>
+            <h1 className="ma0 pa0 f2 f1-ns f-headline-l white header-heading-shadow">Knowledge inventory</h1>
             <SearchModal isHome />
 
             <section className="grid-12 gutter-row-20 gutter-36-ns mt10 mt20-ns mt25-l miw-100 miw-auto-ns home-main-box-margin-ns z-999">
                 <HomeHeaderBox
                     to="/concepts/introduction/"
-                    title="Core Concepts"
+                    title="Basic Concepts"
                     icon="blocks"
                     color="purple"
                 >
-                    Understand the fundamentals of Ghost development.
+                    Form a strong grasp on Fundamentals of Engineering.
                 </HomeHeaderBox>
 
                 <HomeHeaderBox
-                    to="/setup/"
-                    title="Setup Guide"
-                    icon="rocket"
+                    to="/advanced/"
+                    title="Advanced Guides"
+                    icon="rocket"   
                     color="blue"
                 >
-                    Setting up a Ghost site on a server or locally.
+                    Guides for Understanding Complex Engineering Marvels.
                 </HomeHeaderBox>
 
                 <HomeHeaderBox
-                    to="https://docs.ghost.org/tutorials/"
-                    title="Tutorials"
-                    icon="typing"
+                    to="https://themechcafe.ml/research/"
+                    title="Latest Research"
+                    icon="eco-globe"
                     color="tutorial-green"
                 >
-                    Browse tutorials for most common setup and development use-cases.
+                    Read about the Recent Research Advancements in Plain English.
                 </HomeHeaderBox>
             </section>
         </div>

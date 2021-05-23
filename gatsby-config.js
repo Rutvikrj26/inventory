@@ -8,9 +8,7 @@ const easyImport = require(`postcss-easy-import`)
 const algoliaQueries = require(`./utils/algolia-queries`)
 const path = require(`path`)
 
-require(`dotenv`).config({
-    path: `.env.${process.env.NODE_ENV}`,
-})
+require(`dotenv`).config()
 
 if (!process.env.GHOST_API_URL || !process.env.GHOST_API_KEY) {
     throw new Error(
@@ -81,8 +79,8 @@ const plugins = [
     {
         resolve: `gatsby-plugin-manifest`,
         options: {
-            name: `Ghost Docs`,
-            short_name: `Ghost`,
+            name: `MechCafe`,
+            short_name: `MechCafe`,
             start_url: `/`,
             background_color: `#343f44`,
             theme_color: `#343f44`,
@@ -183,9 +181,9 @@ if (SERVICE_WORKER_KILL_SWITCH) {
 
 module.exports = {
     siteMetadata: {
-        title: `Ghost Docs`,
-        siteUrl: process.env.SITE_URL || `https://docs.ghost.org`,
-        description: `Everything you need to know about working with the Ghost professional publishing platform.`,
+        title: `TheMechCafe | Engineering made Simple and Accessible | Knowledge Inventory`,
+        siteUrl: process.env.SITE_URL || `https://themechcafe.ml/inventory`,
+        description: `The knowledge Inventory Developed at the MechCafe is essential to explain important engineering concepts in plain english. This helps recapitulate essential engineering concepts easily and can be used as an Engineering Short Notes or Engineering Guides for Beginners.`,
     },
     plugins: plugins,
 }

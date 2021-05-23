@@ -21,7 +21,7 @@ const HitTemplate = ({ hit }) => {
     // out again if the search result is on the current site, so we can determine
     // if we use Gatsby Link or standard <a> tag.
     // TODO: remove this again, once the move to G3 is fully completed
-    const siteUrl = `^${process.env.SITE_URL || `https://docs.ghost.org`}`
+    const siteUrl = `^${process.env.SITE_URL || `https://mechcafe.ml/inventory`}`
     const siteUrlRegex = new RegExp(siteUrl)
 
     if (hit.url.match(siteUrlRegex)) {
@@ -100,12 +100,6 @@ class Results extends React.Component {
     }
 
     renderSectionTitle({ index }) {
-        // TODO: handle this with query-config
-        searchConfig.marketplace = `Marketplace`
-        searchConfig.blog = `Blog`
-        searchConfig.faq = `FAQ`
-        searchConfig.tutorial = `Tutorials`
-        searchConfig.integration = `Integrations`
 
         const labelClass = {
             faq: `faq-color b--faq-color`,
@@ -131,7 +125,7 @@ class Results extends React.Component {
 
         const { value } = this.state
         const inputProps = {
-            placeholder: `Search documentation...`,
+            placeholder: `Search`,
             onChange: this.onChange,
             value,
             autoFocus: true,
@@ -165,14 +159,9 @@ class Results extends React.Component {
                     renderSectionTitle={this.renderSectionTitle}
                     getSectionSuggestions={this.getSectionSuggestions}
                 />
-                <Index indexName="faq" />
                 <Index indexName="concept" />
-                <Index indexName="setup" />
-                <Index indexName="api" />
-                <Index indexName="tutorial" />
-                <Index indexName="integration" />
-                <Index indexName="blog" />
-                <Index indexName="marketplace" />
+                <Index indexName="software" />
+                <Index indexName="advance" />
             </>
         )
     }

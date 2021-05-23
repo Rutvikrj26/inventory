@@ -7,7 +7,7 @@ import { Layout } from '../../components/common/layout'
 import { Spirit } from '../../styles/spirit-styles'
 import { SidebarNav } from '../../components/common/sidebar'
 import { PrevNextSection } from '../../components/common/prev-next'
-import { PostHeader, Icon, TOC } from '../../components/common'
+import { PostHeader, Icon, TOC, FeedbackForm } from '../../components/common'
 import { MetaData, getMetaImageUrls } from '../../components/common/meta'
 
 const getGitHubLink = (absoluteFilePath) => {
@@ -144,7 +144,7 @@ class Post extends React.Component {
                                     />
                                 </div>
                             </div>
-                            {/* <FeedbackForm location={location} /> */}
+                            { <FeedbackForm location={location} /> }
                         </div>
                         {sideBarLayout.rightSidebar ?
                             <div className="order-3 w-sidebar flex-shrink-0 dn db-l pt10 pl7">
